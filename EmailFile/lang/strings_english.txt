@@ -1,0 +1,24 @@
+<?php
+#Plugin Description
+$s_plugin_emailfile_title = 'Email Attachements';
+$s_plugin_emailfile_description = 'Add attachments to bug by sending emails';
+
+#Configuration Page
+$s_plugin_EmailFile_title = 'Configuration of Email Attachement plugin';
+$s_plugin_EmailFile_process_description = 'Enter informations above to configure the email which will receive the emails.<br />It\'s better to specify an email used only for attachments receptions';
+$s_plugin_EmailFile_launch_reception_script = 'Launch the script now by clicking on the following link';
+$s_plugin_EmailFile_script_name = 'check emails';
+$s_plugin_EmailFile_config_email_host = 'Email host :<br /> (eg: mail.yourdomain.com)';
+$s_plugin_EmailFile_config_email_address = 'Email account :<br /> (eg : user@yourdomain.com)';
+$s_plugin_EmailFile_config_email_password = 'Email password :';
+$s_plugin_EmailFile_config_email_fetch_mode = 'Email fetch mode :';
+$s_plugin_EmailFile_config_email_fetch_mode_manual = 'manual';
+$s_plugin_EmailFile_config_email_fetch_mode_ajax = 'ajax';
+$s_plugin_EmailFile_config_email_fetch_mode_cron = 'cron';
+$s_plugin_EmailFile_config_action_update = 'Update';
+$s_plugin_EmailFile_config_email_fetch_mode_description = 'To fetch email\'s attachments you can use 3 modes :<br /><ul><li><strong>Manual : </strong> A block with a link will be displayed on each bug page. To check if there are new attachments yo have to click on this link</li><li><strong>Ajax : </strong>When each bug page is loaded, an ajax function check if there is news emails ( could be slow if you have lots of attachments )</li><li><strong>Cron : </strong>Add a cron task like this one <br >wget <i>http://www.example.com/mantisDirectory</i>/plugin.php?page=EmailFile/get_emails.php -O /dev/null<br /> to automaticaly fetch emails (best solution)</li></ul>';
+
+#Bug Page
+$s_plugin_EmailFile_bugpage_title = 'Email attachment';
+$s_plugin_EmailFile_click_to_launch_script = 'Click here to launch the script to fetch emails attachments';
+ 

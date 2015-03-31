@@ -1,0 +1,23 @@
+<?php
+#Plugin Description
+$s_plugin_emailfile_title = 'Pièces jointes par email';
+$s_plugin_emailfile_description = 'Ajouter des emails à un bug en envoyant un email';
+
+#Configuration Page
+$s_plugin_EmailFile_title = 'Configuration du module Pièces jointes par email';
+$s_plugin_EmailFile_process_description = 'Entrer les informations de configuration ci-dessous<br />Il est préférable d\'utiliser une adresse email spécifiquement pour cette fonction';
+$s_plugin_EmailFile_launch_reception_script = 'Lancer le script manuellement en cliquant sur le lien suivant';
+$s_plugin_EmailFile_script_name = 'Relever les emails';
+$s_plugin_EmailFile_config_email_host = 'Hôte email :<br /> (ex: mail.yourdomain.com)';
+$s_plugin_EmailFile_config_email_address = 'Compte email :<br /> (ex : user@yourdomain.com)';
+$s_plugin_EmailFile_config_email_password = 'Mot de passe :';
+$s_plugin_EmailFile_config_email_fetch_mode = 'Mode de récupération des emails :';
+$s_plugin_EmailFile_config_email_fetch_mode_manual = 'manuel';
+$s_plugin_EmailFile_config_email_fetch_mode_ajax = 'ajax';
+$s_plugin_EmailFile_config_email_fetch_mode_cron = 'cron';
+$s_plugin_EmailFile_config_action_update = 'Mettre à jour';
+$s_plugin_EmailFile_config_email_fetch_mode_description = 'Pour récupérer les emails vous pouvez utiliser 3 modes :<br /><ul><li><strong>Manuel : </strong> Un block s\'affiche sur la page des bugs, dans lequel vous pouvez cliquer sur un lien qui va aller récupérer manuellement les pièces jointes</li><li><strong>Ajax : </strong>Lors du chargement de la page de détails d\'un bug, un script ajax se lance pour récupérer tous les pièces jointes des emails ( peut être long si vous avez beaucoup de pièces jointes )</li><li><strong>Cron : </strong>Ajouter une tache cron  <br >wget <i>http://www.example.com/mantisDirectory</i>/plugin.php?page=EmailFile/get_emails.php -O /dev/null<br /> qui récupérera les pièces jointes (solution préconisée)</li></ul>';
+
+#Bug Page
+$s_plugin_EmailFile_bugpage_title = 'Pièces jointes par email';
+$s_plugin_EmailFile_click_to_launch_script = 'Cliquer ici pour lancer le script de récupération des pièces jointes par email';
