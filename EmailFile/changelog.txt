@@ -3,9 +3,9 @@
 
   - Rajouts de pièces jointes à un bug via email
 
-  Version 0.1.0
   © Hennes Hervé - 2015
   http://www.h-hennes.fr
  */
 
 2015-01-16 : V 0.1.0 : Version initiale du module
+2015-06-02 : V 0.1.1 : Optimisations traductions

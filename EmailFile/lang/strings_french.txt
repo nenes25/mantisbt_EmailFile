@@ -21,3 +21,15 @@ $s_plugin_EmailFile_config_email_fetch_mode_description = 'Pour récupérer les 
 #Bug Page
 $s_plugin_EmailFile_bugpage_title = 'Pièces jointes par email';
 $s_plugin_EmailFile_click_to_launch_script = 'Cliquer ici pour lancer le script de récupération des pièces jointes par email';
+
+#Upload Page
+$s_plugin_EmailFile_file_was_uploaded_successfuly = 'Le fichier a été envoyé avec succès';
+
+#Get Email Page
+$s_plugin_EmailFile_get_email_account = 'Récuperation des emails pour le compte ';
+$s_plugin_EmailFile_get_email_host = ' sur l'hote ';
+$s_plugin_EmailFile_get_email_treat_message = 'Traitement du message ';
+$s_plugin_EmailFile_get_email_error_bug_id_not_defined ='Erreur identifiant du bug non défini dans le sujet de l\'email, email non traité';
+$s_plugin_EmailFile_get_email_attachment_add_to_bug = 'Pièces jointe à ajouter au bug';
+$s_plugin_EmailFile_get_email_send_file = 'Envoi du fichier ';
+$s_plugin_EmailFile_get_email_no_email = 'Aucun email dans la boite de reception';

@@ -5,8 +5,7 @@
 
   - Rajouts de pièces jointes à un bug via email
 
-  Version 0.1.0
-  © Hennes Hervé - 2014
+  © Hennes Hervé - 2015
   http://www.h-hennes.fr
  */
 require_once( config_get('class_path') . 'MantisPlugin.class.php' );
@@ -20,7 +19,7 @@ class EmailFilePlugin extends MantisPlugin {
         $this->name = lang_get('plugin_emailfile_title');
         $this->description = lang_get('plugin_emailfile_description');
         $this->page = 'config.php';
-        $this->version = '0.1.0';
+        $this->version = '0.1.1';
         $this->requires = array(
             'MantisCore' => '1.2.0',
             'jQuery' => '1.11'

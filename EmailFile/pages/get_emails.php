@@ -5,12 +5,9 @@
 
   - Rajouts de pièces jointes à un bug via email
 
-  Version 0.1.0
-  © Hennes Hervé - 2014
+  © Hennes Hervé - 2015
   http://www.h-hennes.fr
  */
-
-ini_set('display_errors', 'on');
 
 require_once( dirname(__FILE__) . '/../../../core.php' );
 require_once( dirname(__FILE__).'/../EmailFile.php');
@@ -21,7 +18,7 @@ $t_email_pass = plugin_config_get('email_password');
 $t_email_host = plugin_config_get('email_host');
 
 #Affichage des informations de récupération des emails
-echo "Récuperation des emails pour le compte ".$t_email_user." sur l'hote ".$t_email_host."<br />";
+echo plugin_lang_get('get_email_account') . $t_email_user. plugin_lang_get('get_email_host'). $t_email_host."<br />";
 
 #Connexion à la boite email
 $t_inbox = imap_open("{" . $t_email_host . "/pop3/novalidate-cert}INBOX", $t_email_user, $t_email_pass);
@@ -30,32 +27,28 @@ $t_emails = imap_search($t_inbox, 'ALL');
 
 if ($t_emails) {
 
-
     #Emails les + récents en 1er
     rsort($t_emails);
 
     foreach ($t_emails as $t_email_number) {
 
         #Recupération des informations de l'email
-        #$overview = imap_fetch_overview($t_inbox, $t_email_number, 0);
-        #$message = imap_fetchbody($t_inbox, $t_email_number, 2);
         $structure = imap_fetchstructure($t_inbox, $t_email_number);
         $header = imap_headerinfo ($t_inbox,$t_email_number);
 
-        echo 'Traitement du message ' . $t_email_number . '<br />';
+        echo plugin_lang_get('get_email_treat_message'). $t_email_number . '<br />';
         
         #Récupération de l'identifiant du bug auquel il doit etre rattachée
         $t_email_subject = trim(str_replace('?iso-8859-1?Q?','',$header->subject));
         preg_match('/([0-9]{1,})/',$t_email_subject,$matches);
         $bug_id = $matches[1];
-        
-        
+            
         if ( !$bug_id && $bug_id == '') {
-            echo 'Erreur identifiant du bug non défini dans le sujet de l\'email, email non traité <br />';
+            echo plugin_lang_get('get_email_error_bug_id_not_defined').'<br />';
             continue;
         }
         
-        echo 'Pièces jointe à ajouter au bug '.$bug_id.'<br />';
+        echo plugin_lang_get('get_email_attachment_add_to_bug').' '.$bug_id.'<br />';
 
         $attachments = array();
 
@@ -131,8 +124,6 @@ if ($t_emails) {
             } # for($i = 0; $i < count($structure->parts); $i++)
         } # if(isset($structure->parts) && count($structure->parts))
 
-
-
         if (count($attachments) != 0) {
 
             foreach ($attachments as $at) {
@@ -150,7 +141,7 @@ if ($t_emails) {
 
                     #Une fois le fichier exécuté on va exécuter une requête curl pour procéder à l'envoi du fichier
                     $t_curl_url = $g_path . 'plugins/EmailFile/pages/upload_script.php';
-                    echo 'Envoi du fichier '.$at['filename'].' via curl depuis la page ' . $t_curl_url . '<br />';
+                    echo plugin_lang_get('get_email_send_file').' '.$at['filename'].'<br />';
                     $ch = curl_init();
                     curl_setopt($ch, CURLOPT_URL, $t_curl_url);
                     curl_setopt($ch, CURLOPT_POST, 1);
@@ -168,7 +159,7 @@ if ($t_emails) {
     }
 }
 else {
-    echo 'Aucun email dans la boite de reception <br />';
+    echo plugin_lang_get('get_email_no_email ').'<br />';
 }
 
 #Suppression des messages

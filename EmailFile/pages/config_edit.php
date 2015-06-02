@@ -4,8 +4,7 @@
 
   - Rajouts de pièces jointes à un bug via email
 
-  Version 0.1.0
-  © Hennes Hervé - 2014
+  © Hennes Hervé - 2015
   http://www.h-hennes.fr
  */
 

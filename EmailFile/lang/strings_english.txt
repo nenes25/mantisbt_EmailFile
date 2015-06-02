@@ -21,4 +21,16 @@ $s_plugin_EmailFile_config_email_fetch_mode_description = 'To fetch email\'s att
 #Bug Page
 $s_plugin_EmailFile_bugpage_title = 'Email attachment';
 $s_plugin_EmailFile_click_to_launch_script = 'Click here to launch the script to fetch emails attachments';
+
+#Upload Page
+$s_plugin_EmailFile_file_was_uploaded_successfuly = 'File send with success';
+
+#Get Email Page
+$s_plugin_EmailFile_get_email_account = 'Fetching email for account  ';
+$s_plugin_EmailFile_get_email_host = ' on host ';
+$s_plugin_EmailFile_get_email_treat_message = 'Processing message ';
+$s_plugin_EmailFile_get_email_error_bug_id_not_defined ='Error identifiant bug id not defined in email subject, email not traited';
+$s_plugin_EmailFile_get_email_attachment_add_to_bug = 'Attachment to add to bug';
+$s_plugin_EmailFile_get_email_send_file = 'Sending file  ';
+$s_plugin_EmailFile_get_email_no_email = 'No email in mailbox';
  
