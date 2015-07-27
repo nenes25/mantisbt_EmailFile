@@ -9,3 +9,4 @@
 
 2015-01-16 : V 0.1.0 : Version initiale du module
 2015-06-02 : V 0.1.1 : Optimisations traductions
+2015-07-27 : V 0.1.2 : Suppression des emails qui n'ont pas d'objets corrects, sinon ils restent en file d'attente

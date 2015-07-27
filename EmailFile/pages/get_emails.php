@@ -45,6 +45,8 @@ if ($t_emails) {
             
         if ( !$bug_id && $bug_id == '') {
             echo plugin_lang_get('get_email_error_bug_id_not_defined').'<br />';
+			#Supression de l'email car il ne pourra pas être traité
+			imap_delete($t_inbox, $t_email_number);
             continue;
         }
         
