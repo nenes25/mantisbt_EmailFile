@@ -31,9 +31,9 @@ class EmailFilePlugin extends MantisPlugin {
         $this->name = lang_get('plugin_emailfile_title');
         $this->description = lang_get('plugin_emailfile_description');
         $this->page = 'config.php';
-        $this->version = '0.1.2';
+        $this->version = '0.1.4';
         $this->requires = array(
-            'MantisCore' => '1.3.0',
+            'MantisCore' => '2.2',
         );
         $this->author = 'Hennes Hervé';
         $this->url = 'http://www.h-hennes.fr';

@@ -8,6 +8,7 @@ $s_plugin_EmailFile_title = 'Configuration du module Pièces jointes par email';
 $s_plugin_EmailFile_process_description = 'Entrer les informations de configuration ci-dessous<br />Il est préférable d\'utiliser une adresse email spécifiquement pour cette fonction';
 $s_plugin_EmailFile_launch_reception_script = 'Lancer le script manuellement en cliquant sur le lien suivant';
 $s_plugin_EmailFile_script_name = 'Relever les emails';
+$s_plugin_EmailFile_edit_email = 'Editer email';
 $s_plugin_EmailFile_config_email_host = 'Hôte email :<br /> (ex: mail.yourdomain.com)';
 $s_plugin_EmailFile_config_email_address = 'Compte email :<br /> (ex : user@yourdomain.com)';
 $s_plugin_EmailFile_config_email_password = 'Mot de passe :';

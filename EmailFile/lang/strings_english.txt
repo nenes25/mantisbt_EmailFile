@@ -8,6 +8,7 @@ $s_plugin_EmailFile_title = 'Configuration of Email Attachement plugin';
 $s_plugin_EmailFile_process_description = 'Enter informations above to configure the email which will receive the emails.<br />It\'s better to specify an email used only for attachments receptions';
 $s_plugin_EmailFile_launch_reception_script = 'Launch the script now by clicking on the following link';
 $s_plugin_EmailFile_script_name = 'check emails';
+$s_plugin_EmailFile_edit_email = 'Editer email';
 $s_plugin_EmailFile_config_email_host = 'Email host :<br /> (eg: mail.yourdomain.com)';
 $s_plugin_EmailFile_config_email_address = 'Email account :<br /> (eg : user@yourdomain.com)';
 $s_plugin_EmailFile_config_email_password = 'Email password :';

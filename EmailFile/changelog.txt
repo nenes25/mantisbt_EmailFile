@@ -11,3 +11,4 @@
 2015-06-02 : V 0.1.1 : Optimisations traductions
 2015-07-27 : V 0.1.2 : Suppression des emails qui n'ont pas d'objets corrects, sinon ils restent en file d'attente
 2016-07-27 : V 0.1.3 : Compatibilité mantis 1.3.x
+2016-05-17 : V 0.1.4 : Compatibilité mantis 2.2.x et >
